@@ -1,14 +1,15 @@
-int ledPin = 9;      // LED connected to digital pin 9
-int analogPin = 3;   // potentiometer connected to analog pin 3
-int val = 0;         // variable to store the read value
+#Taller Makers night
+int ledPin = 9;      // LED conecado al Pin digital #9
+int analogPin = 3;   // Porenciometro conectado al pin anag. #3
+int val = 0;         // Variable para almacenar la lectura del potenciometro
 
 void setup()
 {
-  pinMode(ledPin, OUTPUT);   // sets the pin as output
+  pinMode(ledPin, OUTPUT);   // establecemos el pin "ledPIN" en salida
 }
 
 void loop()
 {
-  val = analogRead(analogPin);   // read the input pin
-  analogWrite(ledPin, val / 4);  // analogRead values go from 0 to 1023, analogWrite values from 0 to 255
+  val = analogRead(analogPin);   // leemos el potenciometro
+  analogWrite(ledPin, val / 4);  // los valores en analogRead van de 0-1023 , en analogWrite van de 0-255
 }
